@@ -1,13 +1,166 @@
-body {
+/* Styles globaux */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Espace entre les éléments */
+  width: 100%; /* Prend toute la largeur disponible */
+  margin-bottom: 20px; /* Espacement en bas de la navbar */
+}
+
+.navbar a {
+  margin-top: 60px;
+  margin-left: 20px; /* Espace entre les liens */
+  text-decoration: none; /* Retire le soulignement */
+  color: white; /* Change la couleur du texte des liens */
+  font-family: "Inter", sans-serif; /* Police de caractère */
+}
+
+.navbutton {
+  background-color: #43265c;
+  padding: 10px 20px !important;
+  border: 3px solid #623686;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  display: flex; /* Use Flexbox */
+  align-items: center; /* Center items vertically */
+}
+
+.navbutton:hover {
+  background-color: #5e317a;
+  border-color: #623686;
+  scale: 1.0;
+  box-shadow: 0 0px 0px; /* Box shadow */
+}
+
+
+/* Conteneur principal */
+header {
+  position: relative;
+  width: 100%;
+  height: 160vh;
+  background-color: #0e0a19;
+  display: flex;
+  flex-wrap: wrap; /* Permet de faire passer les blocs à la ligne si nécessaire */
+  justify-content: space-between; /* Espace entre les blocs */
+}
+
+.header {
+  padding: 0% 5% 0% 5%;
+  color: rgb(81, 0, 174);
+  flex: 1 1 48%; /* 48% de la largeur, modifiable selon le besoin */
+}
+
+.header h1 {
+  margin: 0;
+  padding-right: 10%;
+  color: white;
+  line-height: 1.2em;
+  font-size: 78px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 400 !important;
+}
+
+.header h2 {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  line-height: 1.2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.header p {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 2px;
+  font-size: 16px;
+  color: white;
+  line-height: 2;
+}
+
+.header button {
+  align-items: center; /* Center vertically (if needed) */
+  padding: 20px; /* Adjust padding around the container */
+}
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  justify-content: center; /* Center the buttons */
+  margin: 20px 0; /* Add margin above and below the buttons */
+}
+
+.logoButton {
+  padding: 20px 50px !important;
+  margin: 15px; /* Space between buttons */
+  border: 2px solid #7c5693;
+  background: transparent;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for box shadow */
+  box-shadow: 0 4px 8px rgba(124, 86, 147, 0.3); /* Box shadow */
+}
+
+button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 12px rgba(124, 86, 147, 0.5); /* Enhanced shadow on hover */
+}
+
+
+button:hover {
+  color: white;
+  transition: 0.5s;
+  transform: scale(1.02);
+  border-color: #a461c1;
+}
+
+.header h3 {
+  color: white;
+  padding-top: 60px;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+}
+
+/* Media Queries pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column; /* Les blocs passent l'un en dessous de l'autre */
+  }
+  
+  button {
+    width: 98%; /* Les boutons prennent toute la largeur */
+    margin-bottom: 20px; /* Espace entre les boutons sur les petits écrans */
+  }
+
+  .header {
+    flex: 1 1 100%; /* Les blocs prennent 100% de la largeur */
+    text-align: center; /* Centrer le texte */
+  }
+
+  .header h1 {
+    font-size: 48px; /* Taille de police ajustée pour les petits écrans */
+  }
 }
