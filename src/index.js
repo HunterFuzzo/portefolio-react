@@ -15,6 +15,8 @@ import server from "./assets/server.svg";
 import pp from "./assets/pp.gif";
 import metasploit from "./assets/metasploit.png";
 import nmap from "./assets/nmap.png";
+import giec from "./assets/giec-screen.png";
+import externalLink from "./assets/external-link.svg";
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
@@ -755,7 +757,7 @@ const Portfolio = () => {
                     style={{
                       marginTop: "10px",
                       textTransform: "none",
-                      fontSize: "13px",
+                      fontSize: "12px",
                       maxWidth: "500px",
                     }}>
                     Bienvenue sur le dépôt GitHub de l'outil de gestion des
@@ -766,28 +768,57 @@ const Portfolio = () => {
                     publier des rapports sur la qualité de l'air.
                   </div>
                 </div>
-                <a
-                  href={resume}
-                  download>
-                  <button
-                    className="navbutton2"
-                    style={{ display: "flex", alignItems: "center" }}>
-                    <img
-                      src={github}
-                      alt="github"
-                      style={{
-                        width: "20px",
-                        height: "20px",
-                        margin: "0px 10px 0px 0px",
-                      }}
-                    />
-                    Repository
-                  </button>
-                </a>
+
+                <div
+                  style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+                  <a
+                    href="https://github.com/HunterFuzzo/site-giec-react"
+                    target="_blank"
+                    rel="noreferrer">
+                    <button
+                      className="navbutton2"
+                      style={{ display: "flex", alignItems: "center" }}>
+                      <img
+                        src={github}
+                        alt="github"
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          margin: "0px 10px 0px 0px",
+                        }}
+                      />
+                      Repository
+                    </button>
+                  </a>
+
+                  <a
+                    href="https://deployed-site-link.com" /* Lien du site déployé */
+                    target="_blank"
+                    rel="noreferrer">
+                    <button
+                      className="navbutton2"
+                      style={{ display: "flex", alignItems: "center" }}>
+                      <img
+                        src={externalLink}
+                        alt="deployed site"
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          margin: "0px 10px 0px 0px",
+                        }}
+                      />
+                      Deployed Site
+                    </button>
+                  </a>
+                </div>
               </div>
-              <div style={{ flexGrow: 1 }}></div>{" "}
-              
-              <div><img href=""></div> {/* "test" text on the right */}
+              <div style={{ flexGrow: 1 }}></div>
+              <div>
+                <img
+                  src={giec}
+                  alt=""
+                  style={{ height: "200px", width: "310px" }}></img>
+              </div>
             </div>
           </div>
 
@@ -805,89 +836,75 @@ const Portfolio = () => {
                 <div>
                   <div
                     className="projectText"
-                    style={{ maxWidth: "450px" }}>
+                    style={{ maxWidth: "500px", fontSize: "18px" }}>
                     Outil de Gestion des Données sur la Qualité de l'Air
                   </div>
                   <div
                     style={{
+                      marginTop: "10px",
                       textTransform: "none",
-                      fontSize: "13px",
+                      fontSize: "12px",
+                      maxWidth: "500px",
                     }}>
-                    qsdqs
+                    Bienvenue sur le dépôt GitHub de l'outil de gestion des
+                    données sur la qualité de l'air développé par DATA-X pour le
+                    compte du Ministère de l'Écologie. Ce dépôt contient le code
+                    source de l'application, conçue pour centraliser les données
+                    météorologiques, gérer le personnel et les capteurs, et
+                    publier des rapports sur la qualité de l'air.
                   </div>
                 </div>
-                <a
-                  href={resume}
-                  download>
-                  <button
-                    className="navbutton2"
-                    style={{ display: "flex", alignItems: "center" }}>
-                    <img
-                      src={github}
-                      alt="github"
-                      style={{
-                        width: "20px",
-                        height: "20px",
-                        margin: "0px 10px 0px 0px",
-                      }}
-                    />
-                    Repository
-                  </button>
-                </a>
-              </div>
-              <div style={{ flexGrow: 1 }}></div>{" "}
-              {/* New empty div for spacing */}
-              <div>test</div> {/* "test" text on the right */}
-            </div>
-          </div>
 
-          <div className="projects">
-            <div
-              className="projectFrame"
-              style={{ display: "flex", alignItems: "flex-start" }}>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  height: "100%",
-                }}>
-                <div>
-                  <div
-                    className="projectText"
-                    style={{ maxWidth: "450px" }}>
-                    Outil de Gestion des Données sur la Qualité de l'Air
-                  </div>
-                  <div
-                    style={{
-                      textTransform: "none",
-                      fontSize: "13px",
-                    }}>
-                    qsdqs
-                  </div>
+                <div
+                  style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+                  <a
+                    href="https://github.com/HunterFuzzo/site-giec-react"
+                    target="_blank"
+                    rel="noreferrer">
+                    <button
+                      className="navbutton2"
+                      style={{ display: "flex", alignItems: "center" }}>
+                      <img
+                        src={github}
+                        alt="github"
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          margin: "0px 10px 0px 0px",
+                        }}
+                      />
+                      Repository
+                    </button>
+                  </a>
+
+                  <a
+                    href="https://deployed-site-link.com" /* Lien du site déployé */
+                    target="_blank"
+                    rel="noreferrer">
+                    <button
+                      className="navbutton2"
+                      style={{ display: "flex", alignItems: "center" }}>
+                      <img
+                        src={externalLink}
+                        alt="deployed site"
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          margin: "0px 10px 0px 0px",
+                        }}
+                      />
+                      Deployed Site
+                    </button>
+                  </a>
                 </div>
-                <a
-                  href={resume}
-                  download>
-                  <button
-                    className="navbutton2"
-                    style={{ display: "flex", alignItems: "center" }}>
-                    <img
-                      src={github}
-                      alt="github"
-                      style={{
-                        width: "20px",
-                        height: "20px",
-                        margin: "0px 10px 0px 0px",
-                      }}
-                    />
-                    Repository
-                  </button>
-                </a>
               </div>
-              <div style={{ flexGrow: 1 }}></div>{" "}
-              {/* New empty div for spacing */}
-              <div>test</div> {/* "test" text on the right */}
+              <div style={{ flexGrow: 1 }}></div>
+              <div>
+                <img
+                  src={giec}
+                  alt=""
+                  style={{ height: "200px", width: "310px" }}></img>
+              </div>
             </div>
           </div>
 
