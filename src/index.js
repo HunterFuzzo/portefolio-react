@@ -17,6 +17,12 @@ import metasploit from "./assets/metasploit.png";
 import nmap from "./assets/nmap.png";
 import giec from "./assets/giec-screen.png";
 import externalLink from "./assets/external-link.svg";
+import quizScreen from "./assets/quiz-screen.png";
+import react from "./assets/react.svg";
+import html from "./assets/html.svg";
+import css from "./assets/css.svg";
+import nodejs from "./assets/nodejs.svg";
+import javascript from "./assets/javascript.svg";
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
@@ -751,7 +757,7 @@ const Portfolio = () => {
                   <div
                     className="projectText"
                     style={{ maxWidth: "500px", fontSize: "18px" }}>
-                    Outil de Gestion des Données sur la Qualité de l'Air
+                    Tools for database management for air quality.
                   </div>
                   <div
                     style={{
@@ -760,12 +766,11 @@ const Portfolio = () => {
                       fontSize: "12px",
                       maxWidth: "500px",
                     }}>
-                    Bienvenue sur le dépôt GitHub de l'outil de gestion des
-                    données sur la qualité de l'air développé par DATA-X pour le
-                    compte du Ministère de l'Écologie. Ce dépôt contient le code
-                    source de l'application, conçue pour centraliser les données
-                    météorologiques, gérer le personnel et les capteurs, et
-                    publier des rapports sur la qualité de l'air.
+                    Welcome to the air quality data management tool developed by
+                    DATA-X for the Ministry of Ecology. This repository contains
+                    the source code of the application, designed to centralize
+                    meteorological data, manage personnel and sensors, and
+                    publish air quality reports.
                   </div>
                 </div>
 
@@ -791,25 +796,48 @@ const Portfolio = () => {
                     </button>
                   </a>
 
-                  <a
-                    href="https://deployed-site-link.com" /* Lien du site déployé */
-                    target="_blank"
-                    rel="noreferrer">
-                    <button
-                      className="navbutton2"
-                      style={{ display: "flex", alignItems: "center" }}>
-                      <img
-                        src={externalLink}
-                        alt="deployed site"
-                        style={{
-                          width: "20px",
-                          height: "20px",
-                          margin: "0px 10px 0px 0px",
-                        }}
-                      />
-                      Deployed Site
-                    </button>
-                  </a>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                    }}>
+                    <a
+                      href="https://mr22206.github.io/Air-Quality-Data-Management-Tool/"
+                      target="_blank"
+                      rel="noreferrer">
+                      <button
+                        className="navbutton2"
+                        style={{ display: "flex", alignItems: "center" }}>
+                        <img
+                          src={externalLink}
+                          alt="deployed site"
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            margin: "0px 10px 0px 0px",
+                          }}
+                        />
+                        Deployed Site
+                      </button>
+                    </a>
+                    <img
+                      src={react}
+                      alt=""
+                      style={{ width: "30px", height: "30px" }}></img>
+                    <img
+                      src={html}
+                      alt=""
+                      style={{ width: "30px", height: "30px" }}></img>
+                    <img
+                      src={css}
+                      alt=""
+                      style={{ width: "30px", height: "30px" }}></img>
+                    <img
+                      src={nodejs}
+                      alt=""
+                      style={{ width: "30px", height: "30px" }}></img>
+                  </div>
                 </div>
               </div>
               <div style={{ flexGrow: 1 }}></div>
@@ -837,7 +865,7 @@ const Portfolio = () => {
                   <div
                     className="projectText"
                     style={{ maxWidth: "500px", fontSize: "18px" }}>
-                    Outil de Gestion des Données sur la Qualité de l'Air
+                    Tools for database management for air quality.
                   </div>
                   <div
                     style={{
@@ -846,19 +874,19 @@ const Portfolio = () => {
                       fontSize: "12px",
                       maxWidth: "500px",
                     }}>
-                    Bienvenue sur le dépôt GitHub de l'outil de gestion des
-                    données sur la qualité de l'air développé par DATA-X pour le
-                    compte du Ministère de l'Écologie. Ce dépôt contient le code
-                    source de l'application, conçue pour centraliser les données
-                    météorologiques, gérer le personnel et les capteurs, et
-                    publier des rapports sur la qualité de l'air.
+                    Welcome to the TDMK Quiz, a collaborative project created by
+                    Dylan, Mohammad, Théo, and Kevin. This repository contains
+                    the source code for an online quiz, developed as part of an
+                    educational project. The quiz is designed to test users'
+                    knowledge on various topics through a simple and interactive
+                    web interface.
                   </div>
                 </div>
 
                 <div
                   style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
                   <a
-                    href="https://github.com/HunterFuzzo/site-giec-react"
+                    href="https://github.com/HunterFuzzo/quiz-tdmk"
                     target="_blank"
                     rel="noreferrer">
                     <button
@@ -877,31 +905,50 @@ const Portfolio = () => {
                     </button>
                   </a>
 
-                  <a
-                    href="https://deployed-site-link.com" /* Lien du site déployé */
-                    target="_blank"
-                    rel="noreferrer">
-                    <button
-                      className="navbutton2"
-                      style={{ display: "flex", alignItems: "center" }}>
-                      <img
-                        src={externalLink}
-                        alt="deployed site"
-                        style={{
-                          width: "20px",
-                          height: "20px",
-                          margin: "0px 10px 0px 0px",
-                        }}
-                      />
-                      Deployed Site
-                    </button>
-                  </a>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                    }}>
+                    <a
+                      href="https://mr22206.github.io/Quiz-TDMK-Site-Web-du-Projet/"
+                      target="_blank"
+                      rel="noreferrer">
+                      <button
+                        className="navbutton2"
+                        style={{ display: "flex", alignItems: "center" }}>
+                        <img
+                          src={externalLink}
+                          alt="deployed site"
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            margin: "0px 10px 0px 0px",
+                          }}
+                        />
+                        Deployed Site
+                      </button>
+                    </a>
+                    <img
+                      src={html}
+                      alt=""
+                      style={{ width: "30px", height: "30px" }}></img>
+                    <img
+                      src={css}
+                      alt=""
+                      style={{ width: "30px", height: "30px" }}></img>
+                    <img
+                      src={javascript}
+                      alt=""
+                      style={{ width: "25px", height: "25px" }}></img>
+                  </div>
                 </div>
               </div>
               <div style={{ flexGrow: 1 }}></div>
               <div>
                 <img
-                  src={giec}
+                  src={quizScreen}
                   alt=""
                   style={{ height: "200px", width: "310px" }}></img>
               </div>
