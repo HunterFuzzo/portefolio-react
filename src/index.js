@@ -748,12 +748,68 @@ const Portfolio = () => {
                 <div>
                   <div
                     className="projectText"
+                    style={{ maxWidth: "500px", fontSize: "18px" }}>
+                    Outil de Gestion des Données sur la Qualité de l'Air
+                  </div>
+                  <div
+                    style={{
+                      marginTop: "10px",
+                      textTransform: "none",
+                      fontSize: "13px",
+                      maxWidth: "500px",
+                    }}>
+                    Bienvenue sur le dépôt GitHub de l'outil de gestion des
+                    données sur la qualité de l'air développé par DATA-X pour le
+                    compte du Ministère de l'Écologie. Ce dépôt contient le code
+                    source de l'application, conçue pour centraliser les données
+                    météorologiques, gérer le personnel et les capteurs, et
+                    publier des rapports sur la qualité de l'air.
+                  </div>
+                </div>
+                <a
+                  href={resume}
+                  download>
+                  <button
+                    className="navbutton2"
+                    style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      src={github}
+                      alt="github"
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                        margin: "0px 10px 0px 0px",
+                      }}
+                    />
+                    Repository
+                  </button>
+                </a>
+              </div>
+              <div style={{ flexGrow: 1 }}></div>{" "}
+              
+              <div><img href=""></div> {/* "test" text on the right */}
+            </div>
+          </div>
+
+          <div className="projects">
+            <div
+              className="projectFrame"
+              style={{ display: "flex", alignItems: "flex-start" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  height: "100%",
+                }}>
+                <div>
+                  <div
+                    className="projectText"
                     style={{ maxWidth: "450px" }}>
                     Outil de Gestion des Données sur la Qualité de l'Air
                   </div>
                   <div
                     style={{
-                      fontSize: "16px",
                       textTransform: "none",
                       fontSize: "13px",
                     }}>
@@ -764,7 +820,57 @@ const Portfolio = () => {
                   href={resume}
                   download>
                   <button
-                    className="navbutton"
+                    className="navbutton2"
+                    style={{ display: "flex", alignItems: "center" }}>
+                    <img
+                      src={github}
+                      alt="github"
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                        margin: "0px 10px 0px 0px",
+                      }}
+                    />
+                    Repository
+                  </button>
+                </a>
+              </div>
+              <div style={{ flexGrow: 1 }}></div>{" "}
+              {/* New empty div for spacing */}
+              <div>test</div> {/* "test" text on the right */}
+            </div>
+          </div>
+
+          <div className="projects">
+            <div
+              className="projectFrame"
+              style={{ display: "flex", alignItems: "flex-start" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  height: "100%",
+                }}>
+                <div>
+                  <div
+                    className="projectText"
+                    style={{ maxWidth: "450px" }}>
+                    Outil de Gestion des Données sur la Qualité de l'Air
+                  </div>
+                  <div
+                    style={{
+                      textTransform: "none",
+                      fontSize: "13px",
+                    }}>
+                    qsdqs
+                  </div>
+                </div>
+                <a
+                  href={resume}
+                  download>
+                  <button
+                    className="navbutton2"
                     style={{ display: "flex", alignItems: "center" }}>
                     <img
                       src={github}

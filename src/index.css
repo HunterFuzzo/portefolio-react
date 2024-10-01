@@ -163,8 +163,6 @@ header {
   box-shadow: 0 4px 8px rgba(124, 86, 147, 0.3); /* Box shadow */
 }
 
-
-
 button:hover {
   color: white;
   transition: 0.5s;
@@ -194,7 +192,7 @@ button:hover {
 
 .projectFrame {
   width: 75%;
-  height: 230px;
+  height: 250px;
   padding: 20px 50px !important;
   margin: 15px; /* Space between buttons */
   border: 2px solid #7c5693;
@@ -209,9 +207,21 @@ button:hover {
 }
 
 .projectText {
-  margin-top: 20px;
   font-size: 16px;
   text-transform: none;
+}
+
+.navbutton2 {
+  background-color: #43265c;
+  padding: 10px 20px !important;
+  border: 1.5px solid #623686;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+  transition: background-color 0.3s ease;
+  display: flex; /* Use Flexbox */
+  align-items: center; /* Center items vertically */
 }
 
 /* Media Queries pour les écrans plus petits */
