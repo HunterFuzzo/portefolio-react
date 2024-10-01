@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.6b95f789.css",
-    "main.js": "/static/js/main.8a212250.js",
+    "main.css": "/static/css/main.f6964de1.css",
+    "main.js": "/static/js/main.9a3329f2.js",
     "static/media/resume.pdf": "/static/media/resume.2d974141c732c50fd149.pdf",
     "static/media/fivem.png": "/static/media/fivem.cb7e9db5c728f7c9ba3d.png",
+    "static/media/metasploit.png": "/static/media/metasploit.c844d80c4e8b82a7c0c4.png",
     "static/media/thm.png": "/static/media/thm.4d5df3e8f3daf6da0c37.png",
     "static/media/pp.gif": "/static/media/pp.5f383ec1eb7447ec96e5.gif",
+    "static/media/nmap.png": "/static/media/nmap.38097efc93b9f40f511f.png",
     "static/media/lua.svg": "/static/media/lua.c8334f892b49bb8beebbfe8fc9bab4e3.svg",
     "static/media/discord.svg": "/static/media/discord.539fbc4c7cb0b89027d0bb1c3826c9cd.svg",
     "static/media/server.svg": "/static/media/server.ec17a37a70c7817abc204fd3c848d65a.svg",
@@ -13,11 +15,11 @@
     "static/media/download.svg": "/static/media/download.e0265d89ad4029deb3ca6c0bf3dd4894.svg",
     "static/media/database.svg": "/static/media/database.bfaae063eefee8b4c3a2e550dc11bbd8.svg",
     "index.html": "/index.html",
-    "main.6b95f789.css.map": "/static/css/main.6b95f789.css.map",
-    "main.8a212250.js.map": "/static/js/main.8a212250.js.map"
+    "main.f6964de1.css.map": "/static/css/main.f6964de1.css.map",
+    "main.9a3329f2.js.map": "/static/js/main.9a3329f2.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b95f789.css",
-    "static/js/main.8a212250.js"
+    "static/css/main.f6964de1.css",
+    "static/js/main.9a3329f2.js"
   ]
 }
