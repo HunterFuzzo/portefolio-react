@@ -1,11 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.25011a28.css",
-    "main.js": "/static/js/main.580bcb3f.js",
+    "main.js": "/static/js/main.1bfe511b.js",
     "static/media/giec-screen.png": "/static/media/giec-screen.b5997408855c18bdd5b0.png",
     "static/media/quiz-screen.png": "/static/media/quiz-screen.c1a639e23511af6d6927.png",
     "static/media/resume.pdf": "/static/media/resume.2d974141c732c50fd149.pdf",
+    "static/media/admin-screen.png": "/static/media/admin-screen.9650be04ab3468c2643c.png",
     "static/media/fivem.png": "/static/media/fivem.cb7e9db5c728f7c9ba3d.png",
+    "static/media/discordbot.png": "/static/media/discordbot.f63556773f78c084a53b.png",
     "static/media/metasploit.png": "/static/media/metasploit.c844d80c4e8b82a7c0c4.png",
     "static/media/thm.png": "/static/media/thm.4d5df3e8f3daf6da0c37.png",
     "static/media/pp.gif": "/static/media/pp.5f383ec1eb7447ec96e5.gif",
@@ -24,10 +26,10 @@
     "static/media/database.svg": "/static/media/database.bfaae063eefee8b4c3a2e550dc11bbd8.svg",
     "index.html": "/index.html",
     "main.25011a28.css.map": "/static/css/main.25011a28.css.map",
-    "main.580bcb3f.js.map": "/static/js/main.580bcb3f.js.map"
+    "main.1bfe511b.js.map": "/static/js/main.1bfe511b.js.map"
   },
   "entrypoints": [
     "static/css/main.25011a28.css",
-    "static/js/main.580bcb3f.js"
+    "static/js/main.1bfe511b.js"
   ]
 }
