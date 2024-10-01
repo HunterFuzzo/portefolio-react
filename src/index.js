@@ -23,25 +23,19 @@ import html from "./assets/html.svg";
 import css from "./assets/css.svg";
 import nodejs from "./assets/nodejs.svg";
 import javascript from "./assets/javascript.svg";
+import adminScreen from "./assets/admin-screen.png";
+import discordBot from "./assets/discordbot.png";
 
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
-// import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
-import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { loadSlim } from "@tsparticles/slim";
 
 const Portfolio = () => {
   const githubChartURL = "https://ghchart.rshah.org/43265c/k-3st3ban";
   const [init, setInit] = useState(false);
 
-  // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-      // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-      // starting from v2 you can add only the features you need reducing the bundle size
-      //await loadAll(engine);
-      //await loadFull(engine);
       await loadSlim(engine);
       //await loadBasic(engine);
     }).then(() => {
@@ -60,10 +54,6 @@ const Portfolio = () => {
         color: {
           value: "#0e0a19",
         },
-        image: "",
-        position: "",
-        repeat: "",
-        size: "",
         opacity: 1,
       },
       backgroundMask: {
@@ -83,147 +73,7 @@ const Portfolio = () => {
         enable: true,
         zIndex: 0,
       },
-      detectRetina: false,
-      duration: 0,
       fpsLimit: 120,
-      interactivity: {
-        detectsOn: "window",
-        events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onDiv: {
-            selectors: {},
-            enable: false,
-            mode: {},
-            type: "circle",
-          },
-          onHover: {
-            enable: false,
-            mode: {},
-            parallax: {
-              enable: false,
-              force: 2,
-              smooth: 10,
-            },
-          },
-          resize: {
-            delay: 0.5,
-            enable: true,
-          },
-        },
-        modes: {
-          trail: {
-            delay: 1,
-            pauseOnStop: false,
-            quantity: 1,
-          },
-          attract: {
-            distance: 200,
-            duration: 0.4,
-            easing: "ease-out-quad",
-            factor: 1,
-            maxSpeed: 50,
-            speed: 1,
-          },
-          bounce: {
-            distance: 200,
-          },
-          bubble: {
-            distance: 200,
-            duration: 0.4,
-            mix: false,
-            divs: {
-              distance: 200,
-              duration: 0.4,
-              mix: false,
-              selectors: {},
-            },
-          },
-          connect: {
-            distance: 80,
-            links: {
-              opacity: 0.5,
-            },
-            radius: 60,
-          },
-          grab: {
-            distance: 100,
-            links: {
-              blink: false,
-              consent: true,
-              opacity: 1,
-            },
-          },
-          push: {
-            default: true,
-            groups: [],
-            quantity: 10,
-          },
-          remove: {
-            quantity: 2,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-            factor: 100,
-            speed: 1,
-            maxSpeed: 50,
-            easing: "ease-out-quad",
-            divs: {
-              distance: 200,
-              duration: 0.4,
-              factor: 100,
-              speed: 1,
-              maxSpeed: 50,
-              easing: "ease-out-quad",
-              selectors: {},
-            },
-          },
-          slow: {
-            factor: 3,
-            radius: 200,
-          },
-          light: {
-            area: {
-              gradient: {
-                start: {
-                  value: "#ffffff",
-                },
-                stop: {
-                  value: "#000000",
-                },
-              },
-              radius: 1000,
-            },
-            shadow: {
-              color: {
-                value: "#000000",
-              },
-              length: 2000,
-            },
-          },
-          absorbers: {
-            color: {
-              value: "#000000",
-            },
-            draggable: true,
-            opacity: 1,
-            destroy: true,
-            orbits: true,
-            size: {
-              value: 50,
-              density: 5,
-              limit: {
-                radius: 0,
-                mass: 0,
-              },
-            },
-          },
-        },
-      },
-      manualParticles: [],
       particles: {
         bounce: {
           horizontal: {
@@ -253,57 +103,10 @@ const Portfolio = () => {
             retries: 0,
           },
         },
-        color: {
-          value: "#ffffff",
-          animation: {
-            h: {
-              count: 0,
-              enable: false,
-              speed: 1,
-              decay: 0,
-              delay: 0,
-              sync: true,
-              offset: 0,
-            },
-            s: {
-              count: 0,
-              enable: false,
-              speed: 1,
-              decay: 0,
-              delay: 0,
-              sync: true,
-              offset: 0,
-            },
-            l: {
-              count: 0,
-              enable: false,
-              speed: 1,
-              decay: 0,
-              delay: 0,
-              sync: true,
-              offset: 0,
-            },
-          },
-        },
-        effect: {
-          close: true,
-          fill: true,
-          options: {},
-          type: {},
-        },
-        groups: {},
         move: {
           angle: {
             offset: 0,
             value: 90,
-          },
-          attract: {
-            distance: 200,
-            enable: false,
-            rotate: {
-              x: 3000,
-              y: 3000,
-            },
           },
           center: {
             x: 50,
@@ -382,7 +185,6 @@ const Portfolio = () => {
             destroy: "none",
           },
         },
-        reduceDuplicates: false,
         shadow: {
           blur: 0,
           color: {
@@ -416,186 +218,6 @@ const Portfolio = () => {
             startValue: "random",
             destroy: "none",
           },
-        },
-        stroke: {
-          width: 0,
-        },
-        zIndex: {
-          value: 0,
-          opacityRate: 1,
-          sizeRate: 1,
-          velocityRate: 1,
-        },
-        destroy: {
-          bounds: {},
-          mode: "none",
-          split: {
-            count: 1,
-            factor: {
-              value: 3,
-            },
-            rate: {
-              value: {
-                min: 4,
-                max: 9,
-              },
-            },
-            sizeOffset: true,
-            particles: {},
-          },
-        },
-        roll: {
-          darken: {
-            enable: false,
-            value: 0,
-          },
-          enable: false,
-          enlighten: {
-            enable: false,
-            value: 0,
-          },
-          mode: "vertical",
-          speed: 25,
-        },
-        tilt: {
-          value: 0,
-          animation: {
-            enable: false,
-            speed: 0,
-            decay: 0,
-            sync: false,
-          },
-          direction: "clockwise",
-          enable: false,
-        },
-        twinkle: {
-          lines: {
-            enable: false,
-            frequency: 0.05,
-            opacity: 1,
-          },
-          particles: {
-            enable: false,
-            frequency: 0.05,
-            opacity: 1,
-          },
-        },
-        wobble: {
-          distance: 5,
-          enable: false,
-          speed: {
-            angle: 50,
-            move: 10,
-          },
-        },
-        life: {
-          count: 0,
-          delay: {
-            value: 0,
-            sync: false,
-          },
-          duration: {
-            value: 0,
-            sync: false,
-          },
-        },
-        rotate: {
-          value: 0,
-          animation: {
-            enable: false,
-            speed: 0,
-            decay: 0,
-            sync: false,
-          },
-          direction: "clockwise",
-          path: false,
-        },
-        orbit: {
-          animation: {
-            count: 0,
-            enable: false,
-            speed: 1,
-            decay: 0,
-            delay: 0,
-            sync: false,
-          },
-          enable: false,
-          opacity: 1,
-          rotation: {
-            value: 45,
-          },
-          width: 1,
-        },
-        links: {
-          blink: false,
-          color: {
-            value: "#fff",
-          },
-          consent: false,
-          distance: 100,
-          enable: false,
-          frequency: 1,
-          opacity: 1,
-          shadow: {
-            blur: 5,
-            color: {
-              value: "#000",
-            },
-            enable: false,
-          },
-          triangles: {
-            enable: false,
-            frequency: 1,
-          },
-          width: 1,
-          warp: false,
-        },
-        repulse: {
-          value: 0,
-          enabled: false,
-          distance: 1,
-          duration: 1,
-          factor: 1,
-          speed: 1,
-        },
-      },
-      pauseOnBlur: true,
-      pauseOnOutsideViewport: true,
-      responsive: [],
-      smooth: false,
-      style: {},
-      themes: [],
-      zLayers: 100,
-      name: "Absorbers",
-      absorbers: {
-        color: {
-          value: "#000000",
-        },
-        draggable: true,
-        opacity: 1,
-        destroy: true,
-        orbits: false,
-        size: {
-          value: {
-            min: 100,
-            max: 1000,
-          },
-          density: 1000,
-          limit: {
-            radius: 10,
-            mass: 0,
-          },
-        },
-        position: {
-          x: 50,
-          y: 50,
-        },
-      },
-      motion: {
-        disable: false,
-        reduce: {
-          factor: 4,
-          value: true,
         },
       },
     }),
@@ -865,7 +487,7 @@ const Portfolio = () => {
                   <div
                     className="projectText"
                     style={{ maxWidth: "500px", fontSize: "18px" }}>
-                    Tools for database management for air quality.
+                    Quiz TDMK project
                   </div>
                   <div
                     style={{
@@ -951,6 +573,206 @@ const Portfolio = () => {
                   src={quizScreen}
                   alt=""
                   style={{ height: "200px", width: "310px" }}></img>
+              </div>
+            </div>
+          </div>
+
+          <div className="projects">
+            <div
+              className="projectFrame"
+              style={{ display: "flex", alignItems: "flex-start" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  height: "100%",
+                }}>
+                <div>
+                  <div
+                    className="projectText"
+                    style={{ maxWidth: "500px", fontSize: "18px" }}>
+                    FiveM Admin Sript
+                  </div>
+                  <div
+                    style={{
+                      marginTop: "10px",
+                      textTransform: "none",
+                      fontSize: "12px",
+                      maxWidth: "500px",
+                    }}>
+                    Welcome to the FiveM script made in Lua, which includes
+                    numerous features, such as warning management stored in the
+                    database, as well as ban and kick management, also handled
+                    by the database, vehicle management, etc., using the RageUI
+                    library for the interface.
+                  </div>
+                </div>
+
+                <div
+                  style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+                  <a
+                    href="https://github.com/HunterFuzzo/admin-menu"
+                    target="_blank"
+                    rel="noreferrer">
+                    <button
+                      className="navbutton2"
+                      style={{ display: "flex", alignItems: "center" }}>
+                      <img
+                        src={github}
+                        alt="github"
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          margin: "0px 10px 0px 0px",
+                        }}
+                      />
+                      Repository
+                    </button>
+                  </a>
+
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                    }}>
+                    <a
+                      href="https://www.youtube.com/watch?v=WVoKGRe3T-Q"
+                      target="_blank"
+                      rel="noreferrer">
+                      <button
+                        className="navbutton2"
+                        style={{ display: "flex", alignItems: "center" }}>
+                        <img
+                          src={externalLink}
+                          alt="Video"
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            margin: "0px 10px 0px 0px",
+                          }}
+                        />
+                        Youtube Video
+                      </button>
+                    </a>
+                    <img
+                      src={lua}
+                      alt=""
+                      style={{ width: "30px", height: "30px" }}></img>
+                    <img
+                      src={database}
+                      alt=""
+                      style={{ width: "30px", height: "30px" }}></img>
+                  </div>
+                </div>
+              </div>
+              <div style={{ flexGrow: 1 }}></div>
+              <div>
+                <img
+                  src={adminScreen}
+                  alt=""
+                  style={{ height: "200px", width: "290px" }}></img>
+              </div>
+            </div>
+          </div>
+
+          <div className="projects">
+            <div
+              className="projectFrame"
+              style={{ display: "flex", alignItems: "flex-start" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  height: "100%",
+                }}>
+                <div>
+                  <div
+                    className="projectText"
+                    style={{ maxWidth: "500px", fontSize: "18px" }}>
+                    Discord Bot for CESI School
+                  </div>
+                  <div
+                    style={{
+                      marginTop: "10px",
+                      textTransform: "none",
+                      fontSize: "12px",
+                      maxWidth: "500px",
+                    }}>
+                    Welcome to the Discord Bot project, as a early discord
+                    developer i had several project on discord, including a
+                    discord bot for CESI (my school), made in Javascript using
+                    the runtime environment NodeJS. This bot is used for
+                    moderation, file sharing, timetable sharing and more.
+                  </div>
+                </div>
+
+                <div
+                  style={{ display: "flex", gap: "10px", marginTop: "10px" }}>
+                  <a
+                    href="https://github.com/HunterFuzzo/admin-menu"
+                    target="_blank"
+                    rel="noreferrer">
+                    <button
+                      className="navbutton2"
+                      style={{ display: "flex", alignItems: "center" }}>
+                      <img
+                        src={github}
+                        alt="github"
+                        style={{
+                          width: "20px",
+                          height: "20px",
+                          margin: "0px 10px 0px 0px",
+                        }}
+                      />
+                      Repository
+                    </button>
+                  </a>
+
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                    }}>
+                    <a
+                      href="https://www.youtube.com/watch?v=WVoKGRe3T-Q"
+                      target="_blank"
+                      rel="noreferrer">
+                      <button
+                        className="navbutton2"
+                        style={{ display: "flex", alignItems: "center" }}>
+                        <img
+                          src={externalLink}
+                          alt="Video"
+                          style={{
+                            width: "20px",
+                            height: "20px",
+                            margin: "0px 10px 0px 0px",
+                          }}
+                        />
+                        Invite Server Test
+                      </button>
+                    </a>
+                    <img
+                      src={javascript}
+                      alt=""
+                      style={{ width: "25px", height: "25px" }}></img>
+                    <img
+                      src={nodejs}
+                      alt=""
+                      style={{ width: "30px", height: "30px" }}></img>
+                  </div>
+                </div>
+              </div>
+              <div style={{ flexGrow: 1 }}></div>
+              <div>
+                <img
+                  src={discordBot}
+                  alt=""
+                  style={{ height: "200px", width: "230px" }}></img>
               </div>
             </div>
           </div>
