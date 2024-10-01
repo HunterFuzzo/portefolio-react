@@ -111,6 +111,13 @@ header {
   margin: 20px 0; /* Add margin above and below the buttons */
 }
 
+.project-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+  justify-content: center; /* Center the buttons */
+  margin: 20px 0; /* Add margin above and below the buttons */
+}
+
 .logoButton {
   padding: 20px 50px !important;
   margin: 15px; /* Space between buttons */
@@ -126,10 +133,36 @@ header {
   box-shadow: 0 4px 8px rgba(124, 86, 147, 0.3); /* Box shadow */
 }
 
-button:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
-  box-shadow: 0 6px 12px rgba(124, 86, 147, 0.5); /* Enhanced shadow on hover */
+.projectButton {
+  padding: 15px 50px !important;
+  margin: 20px; /* Space between buttons */
+  border: 2px solid #7c5693;
+  background: transparent;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for box shadow */
+  box-shadow: 0 4px 8px rgba(124, 86, 147, 0.3); /* Box shadow */
 }
+
+.projectInsideButton {
+  padding: 20px 50px !important;
+  margin: 15px; /* Space between buttons */
+  border: 2px solid #7c5693;
+  background: transparent;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for box shadow */
+  box-shadow: 0 4px 8px rgba(124, 86, 147, 0.3); /* Box shadow */
+}
+
 
 
 button:hover {
@@ -151,6 +184,34 @@ button:hover {
   width: 100%;
   height: 100%;
   z-index: 0; /* Send particles to the background */
+}
+
+.projects {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.projectFrame {
+  width: 75%;
+  height: 230px;
+  padding: 20px 50px !important;
+  margin: 15px; /* Space between buttons */
+  border: 2px solid #7c5693;
+  background: #a461c151;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for box shadow */
+  box-shadow: 0 4px 8px rgba(124, 86, 147, 0.3); /* Box shadow */
+}
+
+.projectText {
+  margin-top: 20px;
+  font-size: 16px;
+  text-transform: none;
 }
 
 /* Media Queries pour les écrans plus petits */
