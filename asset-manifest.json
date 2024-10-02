@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.25011a28.css",
-    "main.js": "/static/js/main.1bfe511b.js",
+    "main.js": "/static/js/main.6b432301.js",
     "static/media/giec-screen.png": "/static/media/giec-screen.b5997408855c18bdd5b0.png",
     "static/media/quiz-screen.png": "/static/media/quiz-screen.c1a639e23511af6d6927.png",
     "static/media/resume.pdf": "/static/media/resume.2d974141c732c50fd149.pdf",
@@ -26,10 +26,10 @@
     "static/media/database.svg": "/static/media/database.bfaae063eefee8b4c3a2e550dc11bbd8.svg",
     "index.html": "/index.html",
     "main.25011a28.css.map": "/static/css/main.25011a28.css.map",
-    "main.1bfe511b.js.map": "/static/js/main.1bfe511b.js.map"
+    "main.6b432301.js.map": "/static/js/main.6b432301.js.map"
   },
   "entrypoints": [
     "static/css/main.25011a28.css",
-    "static/js/main.1bfe511b.js"
+    "static/js/main.6b432301.js"
   ]
 }
