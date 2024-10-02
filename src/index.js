@@ -1,233 +1,28 @@
 /** @format */
 
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import github from "./assets/github.svg";
-import discord from "./assets/discord.svg";
-import fivem from "./assets/fivem.png";
-import download from "./assets/download.svg";
-import thm from "./assets/thm.png";
-import resume from "./assets/resume.pdf";
-import lua from "./assets/lua.svg";
-import database from "./assets/database.svg";
-import server from "./assets/server.svg";
-import pp from "./assets/pp.gif";
-import metasploit from "./assets/metasploit.png";
-import nmap from "./assets/nmap.png";
-import giec from "./assets/giec-screen.png";
-import externalLink from "./assets/external-link.svg";
-import quizScreen from "./assets/quiz-screen.png";
-import react from "./assets/react.svg";
-import html from "./assets/html.svg";
-import css from "./assets/css.svg";
-import nodejs from "./assets/nodejs.svg";
-import javascript from "./assets/javascript.svg";
-import adminScreen from "./assets/admin-screen.png";
-import discordBot from "./assets/discordbot.png";
-
-import { useEffect, useMemo, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
+import * as Assets from "./config/assets.js";
 
 const Portfolio = () => {
   const githubChartURL = "https://ghchart.rshah.org/43265c/k-3st3ban";
-  const [init, setInit] = useState(false);
+  const [init, setInit] = Assets.useState(false);
 
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
+  Assets.useEffect(() => {
+    Assets.initParticlesEngine(async (engine) => {
+      await Assets.loadSlim(engine);
       //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
   }, []);
 
-  const particlesLoaded = (container) => {
-    console.log(container);
-  };
+  const particlesLoaded = Assets.particlesLoaded();
+  const options = Assets.useParticlesOptions();
 
-  const options = useMemo(
-    () => ({
-      autoPlay: true,
-      background: {
-        color: {
-          value: "#0e0a19",
-        },
-        opacity: 1,
-      },
-      backgroundMask: {
-        composite: "destination-out",
-        cover: {
-          color: {
-            value: "#fff",
-          },
-          opacity: 1,
-        },
-        enable: false,
-      },
-      clear: true,
-      defaultThemes: {},
-      delay: 0,
-      fullScreen: {
-        enable: true,
-        zIndex: 0,
-      },
-      fpsLimit: 120,
-      particles: {
-        bounce: {
-          horizontal: {
-            value: 1,
-          },
-          vertical: {
-            value: 1,
-          },
-        },
-        collisions: {
-          absorb: {
-            speed: 2,
-          },
-          bounce: {
-            horizontal: {
-              value: 1,
-            },
-            vertical: {
-              value: 1,
-            },
-          },
-          enable: true,
-          maxSpeed: 50,
-          mode: "bounce",
-          overlap: {
-            enable: true,
-            retries: 0,
-          },
-        },
-        move: {
-          angle: {
-            offset: 0,
-            value: 90,
-          },
-          center: {
-            x: 50,
-            y: 50,
-            mode: "percent",
-            radius: 0,
-          },
-          decay: 0,
-          distance: {},
-          direction: "top",
-          drift: 0,
-          enable: true,
-          gravity: {
-            acceleration: 9.81,
-            enable: false,
-            inverse: false,
-            maxSpeed: 50,
-          },
-          path: {
-            clamp: true,
-            delay: {
-              value: 0,
-            },
-            enable: false,
-            options: {},
-          },
-          outModes: {
-            default: "out",
-            bottom: "out",
-            left: "out",
-            right: "out",
-            top: "out",
-          },
-          random: false,
-          size: false,
-          speed: 0.5,
-          spin: {
-            acceleration: 0,
-            enable: false,
-          },
-          straight: true,
-          trail: {
-            enable: false,
-            length: 10,
-            fill: {},
-          },
-          vibrate: false,
-          warp: true,
-        },
-        number: {
-          density: {
-            enable: false,
-            width: 1920,
-            height: 1080,
-          },
-          limit: {
-            mode: "delete",
-            value: 0,
-          },
-          value: 300,
-        },
-        opacity: {
-          value: {
-            min: 0.1,
-            max: 1,
-          },
-          animation: {
-            count: 0,
-            enable: false,
-            speed: 2,
-            decay: 0,
-            delay: 0,
-            sync: false,
-            mode: "auto",
-            startValue: "random",
-            destroy: "none",
-          },
-        },
-        shadow: {
-          blur: 0,
-          color: {
-            value: "#000",
-          },
-          enable: false,
-          offset: {
-            x: 0,
-            y: 0,
-          },
-        },
-        shape: {
-          close: true,
-          fill: true,
-          options: {},
-          type: "circle",
-        },
-        size: {
-          value: {
-            min: 1,
-            max: 2,
-          },
-          animation: {
-            count: 0,
-            enable: false,
-            speed: 5,
-            decay: 0,
-            delay: 0,
-            sync: false,
-            mode: "auto",
-            startValue: "random",
-            destroy: "none",
-          },
-        },
-      },
-    }),
-    []
-  );
   if (init) {
     return (
       <header>
         <div id="tsparticles"></div>
-
+        <style href={Assets.style}></style>
         <script src="tsparticles.engine.min.js"></script>
 
         <div className="header">
@@ -237,7 +32,7 @@ const Portfolio = () => {
             <h1 style={{ display: "flex", flexDirection: "row" }}>
               Azuka{" "}
               <img
-                src={pp}
+                src={Assets.pp}
                 alt="pp"
                 style={{
                   width: "80px",
@@ -248,11 +43,11 @@ const Portfolio = () => {
               />
             </h1>
             <a
-              href={resume}
+              href={Assets.resume}
               download>
               <button className="navbutton">
                 <img
-                  src={download}
+                  src={Assets.download}
                   alt="download"
                   style={{
                     width: "20px",
@@ -266,9 +61,18 @@ const Portfolio = () => {
           </div>
           <h2>DEVELOPER / PENSTESTER</h2>
           <p>
-            Hello! I started programming at the age of 12, small projects like
-            Python programming. After that, I developed servers for FiveM,
-            learned Lua, Python, C, C++, SQL, and more.
+            Hello, my name is Dylan Rafiliposon, born on July 4, 2005, I am
+            currently 19 years old. I am pursuing a five-year integrated
+            engineering program at CESI Nice, specializing in cybersecurity, and
+            I am eager to focus on network security testing (Pentester). I have
+            a strong background in software development, having worked on
+            various projects, including FiveM server development and personal
+            tools in Python, C++, and JavaScript. Additionally, I have gained
+            experience in cybersecurity through platforms like TryHackMe,
+            mastering tools such as Metasploit and Nmap. I am also an
+            enthusiastic scout leader and musician, passionate about learning
+            and taking on new challenges. My goal is to further my expertise in
+            cybersecurity while contributing positively to the field.
           </p>
 
           <h2 style={{ textAlign: "center" }}>About Me</h2>
@@ -278,7 +82,7 @@ const Portfolio = () => {
             <a href="https://github.com/hunterfuzzo">
               <button className="logoButton">
                 <img
-                  src={github}
+                  src={Assets.github}
                   alt="GitHub"
                   style={{ width: "70px", height: "70px", margin: "10px" }}
                 />
@@ -287,7 +91,7 @@ const Portfolio = () => {
             <a href="https://example.com">
               <button className="logoButton">
                 <img
-                  src={discord}
+                  src={Assets.discord}
                   alt="Discord"
                   style={{ width: "70px", height: "70px", margin: "10px" }}
                 />
@@ -296,7 +100,7 @@ const Portfolio = () => {
             <a href="projects.html">
               <button className="logoButton">
                 <img
-                  src={fivem}
+                  src={Assets.fivem}
                   alt="FiveM"
                   style={{ width: "70px", height: "70px", margin: "10px" }}
                 />
@@ -305,7 +109,7 @@ const Portfolio = () => {
             <a href="https://tryhackme.com/p/Azuka">
               <button className="logoButton">
                 <img
-                  src={thm}
+                  src={Assets.thm}
                   alt="TryHackMe"
                   style={{ width: "70px", height: "70px", margin: "10px" }}
                 />
@@ -318,7 +122,7 @@ const Portfolio = () => {
             <a href="https://tryhackme.com/p/Azuka">
               <button className="logoButton">
                 <img
-                  src={lua}
+                  src={Assets.lua}
                   alt="lua"
                   style={{ width: "70px", height: "70px", margin: "10px" }}
                 />
@@ -327,7 +131,7 @@ const Portfolio = () => {
             <a href="https://tryhackme.com/p/Azuka">
               <button className="logoButton">
                 <img
-                  src={server}
+                  src={Assets.server}
                   alt="server"
                   style={{ width: "70px", height: "70px", margin: "10px" }}
                 />
@@ -336,7 +140,7 @@ const Portfolio = () => {
             <a href="https://tryhackme.com/p/Azuka">
               <button className="logoButton">
                 <img
-                  src={database}
+                  src={Assets.database}
                   alt="database"
                   style={{ width: "70px", height: "70px", margin: "10px" }}
                 />
@@ -345,7 +149,7 @@ const Portfolio = () => {
             <a href="https://tryhackme.com/p/Azuka">
               <button className="logoButton">
                 <img
-                  src={metasploit}
+                  src={Assets.metasploit}
                   alt="metasploit"
                   style={{ width: "70px", height: "70px", margin: "10px" }}
                 />
@@ -354,7 +158,7 @@ const Portfolio = () => {
             <a href="https://tryhackme.com/p/Azuka">
               <button className="logoButton">
                 <img
-                  src={nmap}
+                  src={Assets.nmap}
                   alt="nmap"
                   style={{ width: "70px", height: "70px", margin: "10px" }}
                 />
@@ -406,7 +210,7 @@ const Portfolio = () => {
                       className="navbutton2"
                       style={{ display: "flex", alignItems: "center" }}>
                       <img
-                        src={github}
+                        src={Assets.github}
                         alt="github"
                         style={{
                           width: "20px",
@@ -432,7 +236,7 @@ const Portfolio = () => {
                         className="navbutton2"
                         style={{ display: "flex", alignItems: "center" }}>
                         <img
-                          src={externalLink}
+                          src={Assets.externalLink}
                           alt="deployed site"
                           style={{
                             width: "20px",
@@ -444,19 +248,19 @@ const Portfolio = () => {
                       </button>
                     </a>
                     <img
-                      src={react}
+                      src={Assets.react}
                       alt=""
                       style={{ width: "30px", height: "30px" }}></img>
                     <img
-                      src={html}
+                      src={Assets.html}
                       alt=""
                       style={{ width: "30px", height: "30px" }}></img>
                     <img
-                      src={css}
+                      src={Assets.css}
                       alt=""
                       style={{ width: "30px", height: "30px" }}></img>
                     <img
-                      src={nodejs}
+                      src={Assets.nodejs}
                       alt=""
                       style={{ width: "30px", height: "30px" }}></img>
                   </div>
@@ -465,7 +269,7 @@ const Portfolio = () => {
               <div style={{ flexGrow: 1 }}></div>
               <div>
                 <img
-                  src={giec}
+                  src={Assets.giec}
                   alt=""
                   style={{ height: "200px", width: "310px" }}></img>
               </div>
@@ -515,7 +319,7 @@ const Portfolio = () => {
                       className="navbutton2"
                       style={{ display: "flex", alignItems: "center" }}>
                       <img
-                        src={github}
+                        src={Assets.github}
                         alt="github"
                         style={{
                           width: "20px",
@@ -541,7 +345,7 @@ const Portfolio = () => {
                         className="navbutton2"
                         style={{ display: "flex", alignItems: "center" }}>
                         <img
-                          src={externalLink}
+                          src={Assets.externalLink}
                           alt="deployed site"
                           style={{
                             width: "20px",
@@ -553,15 +357,15 @@ const Portfolio = () => {
                       </button>
                     </a>
                     <img
-                      src={html}
+                      src={Assets.html}
                       alt=""
                       style={{ width: "30px", height: "30px" }}></img>
                     <img
-                      src={css}
+                      src={Assets.css}
                       alt=""
                       style={{ width: "30px", height: "30px" }}></img>
                     <img
-                      src={javascript}
+                      src={Assets.javascript}
                       alt=""
                       style={{ width: "25px", height: "25px" }}></img>
                   </div>
@@ -570,7 +374,7 @@ const Portfolio = () => {
               <div style={{ flexGrow: 1 }}></div>
               <div>
                 <img
-                  src={quizScreen}
+                  src={Assets.quizScreen}
                   alt=""
                   style={{ height: "200px", width: "310px" }}></img>
               </div>
@@ -619,7 +423,7 @@ const Portfolio = () => {
                       className="navbutton2"
                       style={{ display: "flex", alignItems: "center" }}>
                       <img
-                        src={github}
+                        src={Assets.github}
                         alt="github"
                         style={{
                           width: "20px",
@@ -645,7 +449,7 @@ const Portfolio = () => {
                         className="navbutton2"
                         style={{ display: "flex", alignItems: "center" }}>
                         <img
-                          src={externalLink}
+                          src={Assets.externalLink}
                           alt="Video"
                           style={{
                             width: "20px",
@@ -657,11 +461,11 @@ const Portfolio = () => {
                       </button>
                     </a>
                     <img
-                      src={lua}
+                      src={Assets.lua}
                       alt=""
                       style={{ width: "30px", height: "30px" }}></img>
                     <img
-                      src={database}
+                      src={Assets.database}
                       alt=""
                       style={{ width: "30px", height: "30px" }}></img>
                   </div>
@@ -670,7 +474,7 @@ const Portfolio = () => {
               <div style={{ flexGrow: 1 }}></div>
               <div>
                 <img
-                  src={adminScreen}
+                  src={Assets.adminScreen}
                   alt=""
                   style={{ height: "200px", width: "290px" }}></img>
               </div>
@@ -719,7 +523,7 @@ const Portfolio = () => {
                       className="navbutton2"
                       style={{ display: "flex", alignItems: "center" }}>
                       <img
-                        src={github}
+                        src={Assets.github}
                         alt="github"
                         style={{
                           width: "20px",
@@ -745,7 +549,7 @@ const Portfolio = () => {
                         className="navbutton2"
                         style={{ display: "flex", alignItems: "center" }}>
                         <img
-                          src={externalLink}
+                          src={Assets.externalLink}
                           alt="Video"
                           style={{
                             width: "20px",
@@ -757,11 +561,11 @@ const Portfolio = () => {
                       </button>
                     </a>
                     <img
-                      src={javascript}
+                      src={Assets.javascript}
                       alt=""
                       style={{ width: "25px", height: "25px" }}></img>
                     <img
-                      src={nodejs}
+                      src={Assets.nodejs}
                       alt=""
                       style={{ width: "30px", height: "30px" }}></img>
                   </div>
@@ -770,7 +574,7 @@ const Portfolio = () => {
               <div style={{ flexGrow: 1 }}></div>
               <div>
                 <img
-                  src={discordBot}
+                  src={Assets.discordBot}
                   alt=""
                   style={{ height: "200px", width: "230px" }}></img>
               </div>
@@ -796,7 +600,7 @@ const Portfolio = () => {
           </div>
           <h3>Copyright © 2024 Azuka</h3>
         </div>
-        <Particles
+        <Assets.Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}
           options={options}
@@ -807,4 +611,4 @@ const Portfolio = () => {
 };
 
 // Render the JSX component to the DOM
-ReactDOM.render(<Portfolio />, document.getElementById("root"));
+Assets.ReactDOM.render(<Portfolio />, document.getElementById("root"));
